@@ -7,26 +7,19 @@
     </title>
 
     <link rel="stylesheet" href="styles/rock-paper-scissors.css">
-
 </head>
 
 <body>
     <p class="title">Rock Paper Scissors</p>
-    <button onclick="
-        playGame('rock');
-        " class="move-button">
+    <button class="move-button js-rock-button">
         <img src="image/rock-emoji.png" class="move-icon" alt="">
     </button>
 
-    <button onclick="
-       playGame('paper');
-        " class="move-button">
+    <button class="move-button js-paper-button">
         <img src="image/paper-emoji.png" class="move-icon" alt="">
     </button>
 
-    <button onclick="
-        playGame('scissors');
-        " class="move-button">
+    <button class="move-button js-scissors-button">
         <img src="image/scissors-emoji.png" class="move-icon" alt="">
     </button>
 
@@ -36,16 +29,16 @@
 
     <p class="js-score score"></p>
 
-    <button onclick="
-        score.wins = 0;
-        score.losses = 0;
-        score.ties = 0;
-        localStorage.removeItem('score');
-        updateScoreElement();
-        " class="reset-score-button">
+    <button class="reset-score-button js-reset-score-button">
         Reset score
     </button>
-    <script src="/js/rock-paper-scissors.js"></script>
+
+    <button class="auto-play-button js-autoplay-button" >Auto Play</button>
+    <div class="js-confirmation-message"></div>
+    
+    <script src="js/rock-paper-scissors.js">
+
+    </script>
 </body>
 
 </html>
